@@ -19,6 +19,9 @@ const ThemeImage = (props: Props) => {
 };
 
 export default async function Home() {
+
+
+  await prisma.$disconnect
   return (
     <div className={styles.page}>
       <main className={styles.main}>
