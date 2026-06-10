@@ -9,6 +9,15 @@ app.get("/", (req,res)=>{
         msg:"Testing"
     })
 })
+app.get("signinn",async( req ,res )=>{
+    const email=req.body.email;
+    const password=req.body.password
+    await prisma.user.findFirst({
+         where:{
+            email:email
+         }
+    })
+})
 app.post("/signup", async(req ,res)=>{
     const email=req.body.email;
     const password=req.body.password;
