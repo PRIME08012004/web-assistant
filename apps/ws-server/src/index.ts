@@ -1,4 +1,4 @@
-import { prisma } from "@repo/db/client"
+import { prisma } from "@repo/db"
 import { WebSocketServer } from "ws";
 const Server= new WebSocketServer({
     port:3001
