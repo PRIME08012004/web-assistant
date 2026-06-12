@@ -25,6 +25,7 @@ export default async function Home() {
   return (
     <div className="flex flex-col">
       <h1>Hello From Omkar</h1>
+      <h2>Contact at omkarshirsekar704@gmail.com</h2>
      {/* <div>{user?.email}</div>
      <div>{user?.password}</div> */}
     </div>
