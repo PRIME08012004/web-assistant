@@ -20,12 +20,13 @@ const ThemeImage = (props: Props) => {
 
 export default async function Home() {
 
-  const user=await prisma.user.findFirst()
+  // const user=await prisma.user.findFirst()
  
   return (
     <div className="flex flex-col">
-     <div>{user?.email}</div>
-     <div>{user?.password}</div>
+      <h1>Hello From Omkar</h1>
+     {/* <div>{user?.email}</div>
+     <div>{user?.password}</div> */}
     </div>
   );
 }
