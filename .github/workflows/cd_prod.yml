@@ -1,0 +1,14 @@
+name: Deploy to production
+on:
+    push:
+      branches:
+        - "main"
+
+jobs:
+  redeploy_everything:
+    name: Deploy everything on prod server
+    
+    steps:
+      - name: SSH into server
+      - run: |
+         
