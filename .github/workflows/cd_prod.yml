@@ -1,28 +1,28 @@
-name: Deploy to EC2
+# name: Deploy to EC2
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     timeout-minutes: 10
 
-    steps:
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: 54.196.236.247
-          username: ubuntu
-          key: ${{ secrets.SSH_KEY_PK }}
-          command_timeout: 10m
-          script: |
-            set -e
-            cd ~/web-assistant
-            git pull origin main
-            pnpm install --frozen-lockfile
-            pnpm build
-            pm2 restart all
-            pm2 save
+#     steps:
+#       - name: Deploy via SSH
+#         uses: appleboy/ssh-action@v1.0.3
+#         with:
+#           host: 54.196.236.247
+#           username: ubuntu
+#           key: ${{ secrets.SSH_KEY_PK }}
+#           command_timeout: 10m
+#           script: |
+#             set -e
+#             cd ~/web-assistant
+#             git pull origin main
+#             pnpm install --frozen-lockfile
+#             pnpm build
+#             pm2 restart all
+#             pm2 save
